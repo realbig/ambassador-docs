@@ -8,6 +8,8 @@ The API allows communication between 3rd party applications and the Ambassador w
 
 *NOTE: I will still be covering from A-Z how to interact with the API for purposes of this system, but the above documentation links may still prove helpful where I may fall short.* 
 
+**Please visit the [Required Plugins](/required-plugins/) page in order to make sure all required plugins are activated before proceeding.**
+
 This page will cover:
 
 - [Query All Users](#query-all-users)
@@ -19,20 +21,12 @@ This page will cover:
     - [The Full curl](#update-user-metadata-curl)
 - [Zipcode Query](#zipcode-query)
 
+&nbsp;
+
 ## <a name="query-all-users"></a>Query All Users
+***
 
-In order to query information on all of the users, you will use the endpoint `/users/`.
-
-`https://www.ambassadorysystems.com/wp-json/wp/v2/users/`
-
-This endpoint will provide information on all users in segments. By default, this number is 10. You can view up to 100 users at a time by using the query parameter `per_page`. In order to get information on all users, you will need to paginate through the users with the query parameter `page`. The steps will most likely work as below:
-
-1. Query `/users/?per_page=100`
-2. Count returned users. If returned users are under 100, stop. If over 100, continue to step 3.
-3. Query `/users/?per_page=100&page=n` where `n` represents the current page.
-4. Repeat step 2 and 3 as needed until either user count is under 100 or is 0.
-
-## <a name="query-user-info"></a>Query User Information
+&nbsp;
 
 In order to query information on one user, you will use the endpoint `/users/USER_ID/`, where `USER_ID` is the ID of the user.
 
@@ -40,7 +34,12 @@ In order to query information on one user, you will use the endpoint `/users/USE
 
 `USER_ID` will need to be replaced with the user ID you want to query.
 
+&nbsp;
+
 ## <a name="update-user-metadata"></a>Update User Metadata
+***
+
+&nbsp;
 
 In order to update user metadata, you will need to use a curl request. Whether you use a library to do this or a direct bash command does not matter. What matters is that you send the proper headers, ping the correct endpoint, and send the correct data. Let's break this down into those 3 sections.
 
@@ -92,7 +91,12 @@ Where you make the following replacements:
 | **KEY:**      | The metadata identifier key          |
 | **VALUE:**    | The metadata write value             |
 
+&nbsp;
+
 ## <a name="zipcode-query"></a>Zipcode Query
+***
+
+&nbsp;
 
 In order to query users based on a zipcode, you will use a different endpoint. All endpoints referenced above exist appended to `/wp-json/wp/v2/`. The zipcode query uses endpoints appended to `/wp-json/ambassador/v1/`.
 
