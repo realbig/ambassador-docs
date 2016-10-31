@@ -16,6 +16,7 @@ In the following every URL refers to the final domain (ambassadorsystems.com). W
 
 This page will cover:
 
+- [User Schema](#user-schema)
 - [Query All Users](#query-all-users)
 - [Query User Information](#query-user-info)
 - [Update User Metadata](#update-user-metadata)
@@ -24,6 +25,97 @@ This page will cover:
     - [Send the Correct Data](#update-user-metadata-data)
     - [The Full curl](#update-user-metadata-curl)
 - [Zipcode Query](#zipcode-query)
+
+&nbsp;
+
+## <a name="user-schema"></a>User Schema
+***
+
+&nbsp;
+
+In all queries below, the user schema will be as follows:
+
+```json
+{
+    id: (int),
+    name: (string),
+    url: (string),
+    description: (string),
+    link: (string),
+    slug: (string),
+    avatar_urls: (object),
+    meta: (object),
+    wp_user_avatar: (string),
+    agent_ambassadors: (string),
+    lender_ambassadors: (string),
+    farm_zip_1: (string),
+    farm_zip_2: (string),
+    farm_zip_3: (string),
+    farm_zip_4: (string),
+    farm_zip_5: (string),
+    Phone: (string),
+    business_name: (string),
+    Real_Estate_License: (string),
+    Biography: (string),
+    Brokerage: (string),
+    Website: (string),
+    Youtube_URL: (string),
+    agent_user_id: (string),
+    membership_level: (string),
+    score: (string),
+    cumulative_count: (string),
+    weekly_count: (string),
+    quarterly_count: (string),
+    next_lender_id: (string),
+    timestamp_of_last_update: (string),
+    custom_preferred_zip: (string),
+    agent_ambassador_default: (bool|string),
+    lender_ambassador_default: (bool|string),
+    wpm_useraddress: {
+        company: (string),
+        address1: (string),
+        address2: (string),
+        city: (string),
+        state: (string),
+        zip: (string),
+        country: (string)
+    },
+    wpm_levels: {
+        {level_ID}: {
+            Level_ID: (string),
+            Name: (string),
+            Cancelled: (null|bool),
+            CancelDate: (null|string),
+            Pending: (null|bool),
+            UnConfirmed: (null|bool),
+            Expired: (bool),
+            ExpiryDate: (bool),
+            SequentialCancelled: (null|bool),
+            Scheduled: (bool),
+            ScheduleInfo: (mixed),
+            ParentLevel: (mixed),
+            Active: true,
+            Status: [
+                (string)
+            ],
+            Timestamp: (int),
+            TxnID: (string)
+        }
+    },
+    _links: {
+        self: [
+            {
+                href: (string)
+            }
+        ],
+        collection: [
+            {
+                href: (string)
+            }
+        ]
+    }
+}
+```
 
 &nbsp;
 
