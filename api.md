@@ -195,6 +195,27 @@ The data you will need to send will be in the form of query parameters `KEY=VALU
 
 As it currently stands, the only way to modify what metadata can be written is to either contact the system administrator to have edits made to the system codebase, or create a plugin on the website that modifies this information via the filter hook `ambassadorprofile_custom_user_rest_fields`. For more information on how to do this, please visit the [developer resources page](https://developer.wordpress.org/reference/functions/add_filter/).
 
+Example:
+
+```php
+// This will add readable fields to the user schema, but they will not be writeable.
+add_filter( 'ambassadorprofile_custom_user_rest_fields', function ( $fields ) {
+
+    $fields[] = 'new_readable_field';
+    $fields[] = 'new_writeable_field';
+    
+    return $fields;
+});
+
+// This makes readable fields writeable.
+add_filter( 'ambassadorprofile_custom_user_rest_fields', function ( $fields ) {
+    
+    $fields[] = 'new_writeable_field';
+
+    return $fields;
+});
+```
+
 ### <a name="update-user-metadata-curl"></a>The Full curl
 
 Below is what the full curl request would look like from terminal:
