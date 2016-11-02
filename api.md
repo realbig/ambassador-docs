@@ -16,15 +16,36 @@ In the following every URL refers to the final domain (ambassadorsystems.com). W
 
 This page will cover:
 
+- [Authentication](#authentication)
 - [User Schema](#user-schema)
 - [Query All Users](#query-all-users)
 - [Query User Information](#query-user-info)
 - [Update User Metadata](#update-user-metadata)
-    - [Send Proper Header](#update-user-metadata-header)
     - [Ping the Correct Endpoint](#update-user-metadata-endpoint)
     - [Send the Correct Data](#update-user-metadata-data)
     - [The Full curl](#update-user-metadata-curl)
 - [Zipcode Query](#zipcode-query)
+
+&nbsp;
+
+## <a name="authentication"></a>Authentication
+***
+
+&nbsp;
+
+In efforts of security, basic authorization is required to update and read user metadata. The curl request must contain a header with the format:
+ 
+`Authorization: Basic AUTH_KEY` where `AUTH_KEY` will be replaced with the authorization key. To obtain an authorization key, follow the steps outlined below:
+
+1. Log into the website (ambassadorsystems.com) with your admin account.
+2. Go to your edit profile screen `/wp-admin/profile.php`
+3. Scroll down to the section titled "Application Passwords" `/wp-admin/profile.php#application-passwords`
+4. Enter the "New Application Password Name" field and click "Add New". *Note: the name is arbitrary. Set it to something you will recognize in the future, but note that the name you enter is **not** the password itself, but just a label.*
+5. A window will be presented containing the password. **Take note of it for later as you will not be able to see it again.**
+6. Note that the password now exists in the table below and can be revoked if it is compromised or if you would like to create a new one on occassion.
+7. Go into any terminal on your machine and enter the following command: `echo -n "USERNAME:KEY" | base64` where `USERNAME` is your WordPress username that you used to generate the password with (not your email, your username) and `KEY` is the generated password you just created. Take note of the echoed value in the terminal, this is your authorization key.
+
+Now you have the `AUTH_KEY` to use in the headers mentioned above.
 
 &nbsp;
 
@@ -153,22 +174,6 @@ In order to query information on one user, you will use the endpoint `/users/USE
 User metadata is distinct from the standard set of user data supported directly by WP REST API. Metadata are custom fields defined as user extensions to support the Ambassador Systems website’s unique functions such as linking between users and scoring user’s usage for the LAL (Lead Allocation Logic) system.
 
 In order to update user metadata, you will need to use a curl request. Whether you use a library to do this or a direct bash command does not matter. What matters is that you send the proper headers, ping the correct endpoint, and send the correct data. Let's break this down into those 3 sections.
-
-### <a name="update-user-metadata-header"></a>Send Proper Header
-
-In efforts of security, basic authorization is required to update user metadata. The header must contain information on this in the format:
- 
-`Authorization: Basic AUTH_KEY` where `AUTH_KEY` will be replaced with the authorization key. To obtain an authorization key, follow the steps outlined below:
-
-1. Log into the website (ambassadorsystems.com) with your admin account.
-2. Go to your edit profile screen `/wp-admin/profile.php`
-3. Scroll down to the section titled "Application Passwords" `/wp-admin/profile.php#application-passwords`
-4. Enter the "New Application Password Name" field and click "Add New". *Note: the name is arbitrary. Set it to something you will recognize in the future, but note that the name you enter is **not** the password itself, but just a label.*
-5. A window will be presented containing the password. **Take note of it for later as you will not be able to see it again.**
-6. Note that the password now exists in the table below and can be revoked if it is compromised or if you would like to create a new one on occassion.
-7. Go into any terminal on your machine and enter the following command: `echo -n "USERNAME:KEY" | base64` where `USERNAME` is your WordPress username that you used to generate the password with (not your email, your username) and `KEY` is the generated password you just created. Take note of the echoed value in the terminal, this is your authorization key.
-
-Now you have the `AUTH_KEY` to use in the headers mentioned above.
 
 ### <a name="update-user-metadata-endpoint"></a>Ping the Correct Endpoint
 
