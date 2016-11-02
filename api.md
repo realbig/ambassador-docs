@@ -191,6 +191,7 @@ The data you will need to send will be in the form of query parameters `KEY=VALU
 - quarterly_count
 - next_lender_id
 - timestamp_of_last_update
+- custom_preferred_zip
 
 As it currently stands, the only way to modify what metadata can be written is to either contact the system administrator to have edits made to the system codebase, or create a plugin on the website that modifies this information via the filter hook `ambassadorprofile_custom_user_rest_fields`. For more information on how to do this, please visit the [developer resources page](https://developer.wordpress.org/reference/functions/add_filter/).
 
