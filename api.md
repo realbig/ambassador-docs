@@ -66,6 +66,8 @@ In all queries below, the user schema will be as follows:
     slug: (string),
     avatar_urls: (object),
     meta: (object),
+    type: (string),
+    level: (string),
     wp_user_avatar: (string),
     agent_ambassadors: (string),
     lender_ambassadors: (string),
