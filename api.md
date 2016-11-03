@@ -11,24 +11,18 @@ The API allows communication between 3rd party applications and the Ambassador w
 **Please visit the [Required Plugins](/required-plugins/) page in order to make sure all required plugins are activated before proceeding.**
 
 ### Preliminary note
+{:.no_toc}
 
 In the following every URL refers to the final domain (ambassadorsystems.com). Where needed the staging URL (hometohome.staging.wpengine.com) will have to be considered.
 
 This page will cover:
 
-- [Authentication](#authentication)
-- [User Schema](#user-schema)
-- [Query All Users](#query-all-users)
-- [Query User Information](#query-user-info)
-- [Update User Metadata](#update-user-metadata)
-    - [Ping the Correct Endpoint](#update-user-metadata-endpoint)
-    - [Send the Correct Data](#update-user-metadata-data)
-    - [The Full curl](#update-user-metadata-curl)
-- [Zipcode Query](#zipcode-query)
+* TOC
+{:toc}
 
 &nbsp;
 
-## <a name="authentication"></a>Authentication
+## Authentication
 ***
 
 &nbsp;
@@ -49,7 +43,7 @@ Now you have the `AUTH_KEY` to use in the headers mentioned above.
 
 &nbsp;
 
-## <a name="user-schema"></a>User Schema
+## User Schema
 ***
 
 &nbsp;
@@ -142,7 +136,7 @@ In all queries below, the user schema will be as follows:
 
 &nbsp;
 
-## <a name="query-all-users"></a>Query All Users
+## Query All Users
 ***
 
 &nbsp;
@@ -158,7 +152,12 @@ This endpoint will provide information on all users in segments. By default, thi
 3. Query `/users/?per_page=100&page=n` where `n` represents the current page.
 4. Repeat step 2 and 3 as needed until either user count is under 100 or is 0.
 
-## <a name="query-user-info"></a>Query User Information
+&nbsp;
+
+## Query User Information
+***
+
+&nbsp;
 
 In order to query information on one user, you will use the endpoint `/users/USER_ID/`, where `USER_ID` is the ID of the user.
 
@@ -168,7 +167,7 @@ In order to query information on one user, you will use the endpoint `/users/USE
 
 &nbsp;
 
-## <a name="update-user-metadata"></a>Update User Metadata
+## Update User Metadata
 ***
 
 &nbsp;
@@ -177,11 +176,11 @@ User metadata is distinct from the standard set of user data supported directly 
 
 In order to update user metadata, you will need to use a curl request. Whether you use a library to do this or a direct bash command does not matter. What matters is that you send the proper headers, ping the correct endpoint, and send the correct data. Let's break this down into those 3 sections.
 
-### <a name="update-user-metadata-endpoint"></a>Ping the Correct Endpoint
+### Ping the Correct Endpoint
 
 The endpoint used for updating user metadata is the same endpoint used for viewing a user's metadata: `/users/USER_ID/`. The difference is that you need to send this curl with the POST method, rather than with the GET method.
 
-### <a name="update-user-metadata-data"></a>Send the Correct Data
+### Send the Correct Data
 
 The data you will need to send will be in the form of query parameters `KEY=VALUE` where `KEY` is the identifier of the metadata and `VALUE` is the data you wish to write. You may send multiple pieces at once by separating them with an ampersand "&". Like so `KEY1=VALUE1&KEY2=VALUE2&KEY3=VALUE3` etc. Each of these pieces of metadata will be written to the user **only if** that metadata has been pre-approved as writeable. Below is a list of writeable metadata, all other write attemps will be rejected.
 
@@ -218,7 +217,7 @@ add_filter( 'ambassadorprofile_custom_user_rest_fields', function ( $fields ) {
 });
 ```
 
-### <a name="update-user-metadata-curl"></a>The Full curl
+### The Full curl
 
 Below is what the full curl request would look like from terminal:
 
@@ -233,7 +232,7 @@ Where you make the following replacements:
 
 &nbsp;
 
-## <a name="zipcode-query"></a>Zipcode Query
+## Zipcode Query
 ***
 
 &nbsp;

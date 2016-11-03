@@ -10,17 +10,12 @@ One very important piece of this system is the integration into Google Sheets. T
 
 This page will cover:
 
-- [Creating The Google APP](#google-app)
-    - [Log Into Google Developer Console](#google-app-login)
-    - [Create The APP](#google-app-create)
-    - [Setup The Integrations](#google-app-integrations)
-    - [Setup The Credentials](#google-app-credentials)
-- [Integrating The Website](#integrating-website)
-- [Setting Up Feeds](#feeds)
+* TOC
+{:toc}
 
 &nbsp;
 
-## <a name="google-app"></a>Creating The Google APP
+## Creating The Google APP
 ***
 
 &nbsp;
@@ -34,25 +29,25 @@ The steps are:
 3. [Setup The Integrations](#google-app-integrations)
 4. [Setup The Credentials](#google-app-credentials)
 
-### <a name="google-app-login"></a>Log Into Google Developer Console
+### Log Into Google Developer Console
 
 You must first log into Google. **Log into Google with whichever account has proper access to the Google Sheets that you will need to push to.** Once logged in, head over to the [Google Developer Console](https://console.developers.google.com).
 
-### <a name="google-app-create"></a>Create The APP 
+### Create The APP 
 
 1. Click on the dropdown labelled "Project" to the right of the "Google APIs" logo.
 2. Click "Create Project" from the dropdown.
 3. Enter your Project Name and click "Create". This may take a moment.
 4. Once created you will be automatically re-directed to the APP dashboard. If you are not, refresh the page and select your APP from the same dropdown as in step 1.
 
-### <a name="google-app-integrations"></a>Setup The Integrations
+### Setup The Integrations
 
 1. With your APP selected, click on "Library" in the left-hand toolbar.
 2. Navigate or search for the "Drive API".
 3. Click the "Enable" button near the top of the window.
 4. Repeat steps 1-3 but with the "Sheets API".
 
-### <a name="google-app-credentials"></a>Setup The Credentials
+### Setup The Credentials
 
 1. With your APP selected, click on "Credentials" in the left-hand toolbar.
 2. Click on the blue, "Create credentials" button in the middle of the screen.
@@ -71,7 +66,7 @@ Your Google APP is now setup and ready to go!
 
 &nbsp;
 
-## <a name="integrating-website"></a>Integrating The Website
+## Integrating The Website
 ***
 
 &nbsp;
@@ -90,7 +85,7 @@ Your website now is authorized to manipulate Google Sheets with your Google acco
 
 &nbsp;
 
-## <a name="feeds"></a>Setting Up Feeds
+## Setting Up Feeds
 ***
 
 &nbsp;
