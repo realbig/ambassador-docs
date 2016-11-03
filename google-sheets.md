@@ -13,12 +13,7 @@ This page will cover:
 * TOC
 {:toc}
 
-&nbsp;
-
 ## Creating The Google APP
-***
-
-&nbsp;
 
 In order to provide an integration between the website and Google, an app must be created. This will provide proper authorization to the Google Sheets.
 
@@ -64,12 +59,7 @@ You must first log into Google. **Log into Google with whichever account has pro
 
 Your Google APP is now setup and ready to go!
 
-&nbsp;
-
 ## Integrating The Website
-***
-
-&nbsp;
 
 You now need to tell the website that the Google APP exists and give the website authorization.
 
@@ -83,12 +73,7 @@ You now need to tell the website that the Google APP exists and give the website
 
 Your website now is authorized to manipulate Google Sheets with your Google account.
 
-&nbsp;
-
 ## Setting Up Feeds
-***
-
-&nbsp;
 
 In order to submit data to Google Sheets, you will need to setup feeds from your forms.
 

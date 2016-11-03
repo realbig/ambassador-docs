@@ -17,12 +17,7 @@ This page will cover:
 * TOC
 {:toc}
 
-&nbsp;
-
 ## Create A Dashboard
-***
-
-&nbsp;
 
 You can now dynamically create as many dashboards as you need. Even though the typical is only the 3 (client, agent, lender), this gives you full control over each one and the ability to create more if needed, like for testing. To do so go to Dashboards in the admin menu. It's managed like any other post type. Add New or edit an existing one.
 

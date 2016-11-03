@@ -26,6 +26,16 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+}
+
+.post-content h2 {
+  border-bottom: 2px solid #aaa;
+}
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {

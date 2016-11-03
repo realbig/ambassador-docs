@@ -20,12 +20,7 @@ This page will cover:
 * TOC
 {:toc}
 
-&nbsp;
-
 ## Authentication
-***
-
-&nbsp;
 
 In efforts of security, basic authorization is required to update and read user metadata. The curl request must contain a header with the format:
  
@@ -41,12 +36,7 @@ In efforts of security, basic authorization is required to update and read user 
 
 Now you have the `AUTH_KEY` to use in the headers mentioned above.
 
-&nbsp;
-
 ## User Schema
-***
-
-&nbsp;
 
 In all queries below, the user schema will be as follows:
 
@@ -134,12 +124,7 @@ In all queries below, the user schema will be as follows:
 }
 ```
 
-&nbsp;
-
 ## Query All Users
-***
-
-&nbsp;
 
 In order to query information on all of the users, you will use the endpoint `/users/`.
 
@@ -152,12 +137,7 @@ This endpoint will provide information on all users in segments. By default, thi
 3. Query `/users/?per_page=100&page=n` where `n` represents the current page.
 4. Repeat step 2 and 3 as needed until either user count is under 100 or is 0.
 
-&nbsp;
-
 ## Query User Information
-***
-
-&nbsp;
 
 In order to query information on one user, you will use the endpoint `/users/USER_ID/`, where `USER_ID` is the ID of the user.
 
@@ -165,12 +145,7 @@ In order to query information on one user, you will use the endpoint `/users/USE
 
 `USER_ID` will need to be replaced with the user ID you want to query.
 
-&nbsp;
-
 ## Update User Metadata
-***
-
-&nbsp;
 
 User metadata is distinct from the standard set of user data supported directly by WP REST API. Metadata are custom fields defined as user extensions to support the Ambassador Systems website’s unique functions such as linking between users and scoring user’s usage for the LAL (Lead Allocation Logic) system.
 
@@ -230,12 +205,7 @@ Where you make the following replacements:
 | **KEY:**      | The metadata identifier key          |
 | **VALUE:**    | The metadata write value             |
 
-&nbsp;
-
 ## Zipcode Query
-***
-
-&nbsp;
 
 In order to query users based on a zipcode, you will use a different endpoint. All endpoints referenced above exist appended to `/wp-json/wp/v2/`. The zipcode query uses endpoints appended to `/wp-json/ambassador/v1/`.
 
