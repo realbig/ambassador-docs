@@ -6,7 +6,7 @@ permalink: /dashboards/
 
 Dashboards are what the end-user will see when managing their home to homes.
 
-![dashboard](images/dashboard-example.png "Example Dashboard")
+![dashboard](/ambassador-docs/images/dashboard-example.png "Example Dashboard")
 
 You can create as many dashboards as you like and customize each one individually.
 
