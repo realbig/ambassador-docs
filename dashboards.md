@@ -41,10 +41,12 @@ The user viewing the dashboard only needs to see specific entries, typically in 
 
 You can also enter a "Custom Email" to match against instead of the logged in user's email address. Technically speaking, you could enter any value here and it would match against whichver column you choose.
 
-### Show the dashboard on a page
-
-The dashboard can be displayed by using the shortcode `[ambassador_dashboard id="N"]`, where "N" is the dashboard ID. You can copy and paste the provided shortcode from the metabox "How to Use" and place it any page or post. I recommending doing so now on a test page so that you can continually preview your dashboard and ensure it is setup right.
-
 ### Everything else
 
 Now go through and setup everything else. All other settings are visual and mostly self-explanatory. Simply edit the settings, update the dashboard, and then preview your changes.
+
+## Embed A Dashboard
+
+The dashboard can be displayed by using the shortcode `[ambassador_dashboard id="N"]`, where "N" is the dashboard ID. You can copy and paste the provided shortcode from the metabox "How to Use" and place it any page or post. I recommending doing so now on a test page so that you can continually preview your dashboard and ensure it is setup right.
+
+With the Ambassador System, you will want to place dashboards within WLM (WishList Member) visibility shortcodes. They look like `[wlm_private 'Level 1|Level 2']CONTENT[/wlm_private]`, where `Level 1` and `Level 2` represent various levels, separated by pipes `|`, that should be able to view the content. For more information on how to implement this, view the [WLM documentation](http://member.wishlistproducts.com/11-private-tag-protection/).
