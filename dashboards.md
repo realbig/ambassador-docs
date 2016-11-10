@@ -33,7 +33,7 @@ The first thing that you need to do is connect the dashboard to a Google Sheet. 
 
 *Note: You will need to create a form and setup a feed. Instructions on how to do so can be found [here](/ambassador-docs/google-sheets#feeds).*
 
-Each dashboard can submit a request to the Google Sheet to add a new row. This is why you have to connect this dashboard to a sheet. Next, you have to connect the dashboard to a form for making the submission. You will need to create a form, setup the Google Sheet feed, and then select that form when creating the dashboard. You can select the form in the metabox labelled "Submit Form".
+Each dashboard can submit a request to the Google Sheet to add a new row. This is why you have to connect this dashboard to a sheet. Next, you have to connect the dashboard to a form for making the submission. You will need to create a form, setup the Google Sheet feed, and then select that form when creating the dashboard. You can select the form in the metabox labelled "Submit Form". For more information on setting up the form, see <a href="#dashboard-form">Dashboard Form</a>.
 
 ### Setup the entry filtering
 
@@ -44,6 +44,18 @@ You can also enter a "Custom Email" to match against instead of the logged in us
 ### Everything else
 
 Now go through and setup everything else. All other settings are visual and mostly self-explanatory. Simply edit the settings, update the dashboard, and then preview your changes.
+
+## Dashboard Form
+
+You will need to create a Gravity Form to link the Dashboard to. This form should be setup to send the form to a Google Sheet. For information on setting up the Google Sheet feed, visit the <a href="/ambassador-docs/google-sheets/">Google Sheets page</a>.
+
+Setup the form like you would any form, but there are a few unique fields you will need to add. Add the following **hidden** fields. When adding each field, click on the "Advanced" tab in the field's settings, check "Allow field to be populated dynamically", and for "Parameter Name", type in according to the table below:
+
+| **Member Level:** | member_level |
+| **Member Type:**  | member_type  |
+| **User ID:**      | user_id      |
+
+When the form is submitted from the dashboard, the above fields will automatically be filled in and sent to the Google Sheet, but hidden from the user submitting the form.
 
 ## Embed A Dashboard
 
