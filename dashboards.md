@@ -47,7 +47,7 @@ Now go through and setup everything else. All other settings are visual and most
 
 ## Dashboard Form
 
-You will need to create a Gravity Form to link the Dashboard to. This form should be setup to send the form to a Google Sheet. For information on setting up the Google Sheet feed, visit the <a href="/ambassador-docs/google-sheets/">Google Sheets page</a>.
+You will need to create a Gravity Form to link the Dashboard to. This form should be setup to send the form to a Google Sheet. For information on setting up the Google Sheet feed, visit the <a href="/ambassador-docs/google-sheets/#setting-up-feeds">Google Sheets page</a>.
 
 Setup the form like you would any form, but there are a few unique fields you will need to add. Add the following **hidden** fields. When adding each field, click on the "Advanced" tab in the field's settings, check "Allow field to be populated dynamically", and for "Parameter Name", type in according to the table below:
 
