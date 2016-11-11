@@ -57,3 +57,9 @@ The `populate-lenders` class will populate the drop down choices with a list of 
 When editing a Submit Form for a dashboard, ollow the above steps, but in step 3, use the classes `populate-user-lenders` or `populate-user-agents`.
 
 The `populate-user-lenders` class will populate the drop down choices with the list of users that were previously selected for the user, in other words their network agents/lenders.
+
+## Embedding the Form
+
+Embed the Gravity Form just like any other form. It should be done so on the page that is designated as the "Edit Profile" page from the [settings page](/ambassador-docs/settings/#edit-profile-page).
+
+With the Ambassador System, you will want to place forms within WLM (WishList Member) visibility shortcodes. They look like `[wlm_private 'Level 1|Level 2']CONTENT[/wlm_private]`, where `Level 1` and `Level 2` represent various levels, separated by pipes `|`, that should be able to view the content. For more information on how to implement this, view the [WLM documentation](http://member.wishlistproducts.com/11-private-tag-protection/).

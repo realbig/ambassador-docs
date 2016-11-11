@@ -21,7 +21,7 @@ This page will cover:
 
 You can now dynamically create as many dashboards as you need. Even though the typical is only the 3 (client, agent, lender), this gives you full control over each one and the ability to create more if needed, like for testing. To do so go to Dashboards in the admin menu. It's managed like any other post type. Add New or edit an existing one.
 
-There are a lot of settings to take in here. I recommend setting up a test dashboard to get a feel for how it works. I will cover some of the less self-explanatory details here.
+There are a lot of settings to take in here. I recommend setting up a test dashboard to get a feel for how it works. I will cover some of the less self-explanatory details here. You can view the dashboard itself, without use of a shortcode, by simply clicking "View Dashboard" or "Preview Changes", like any other page.
 
 ### Connect the dashboard to a Google Sheet
 
@@ -45,6 +45,8 @@ You can also enter a "Custom Email" to match against instead of the logged in us
 
 Now go through and setup everything else. All other settings are visual and mostly self-explanatory. Simply edit the settings, update the dashboard, and then preview your changes.
 
+Note that the Edit Profile link is generated from the setting you setup on the [settings page](/ambassador-docs/settings/#edit-profile-page).
+
 ## Dashboard Form
 
 You will need to create a Gravity Form to link the Dashboard to. This form should be setup to send the form to a Google Sheet. For information on setting up the Google Sheet feed, visit the <a href="/ambassador-docs/google-sheets/#setting-up-feeds">Google Sheets page</a>.
@@ -59,6 +61,6 @@ When the form is submitted from the dashboard, the above fields will automatical
 
 ## Embed A Dashboard
 
-The dashboard can be displayed by using the shortcode `[ambassador_dashboard id="N"]`, where "N" is the dashboard ID. You can copy and paste the provided shortcode from the metabox "How to Use" and place it any page or post. I recommending doing so now on a test page so that you can continually preview your dashboard and ensure it is setup right.
+The dashboard can be displayed by using the shortcode `[ambassador_dashboard id="N"]`, where "N" is the dashboard ID. You can copy and paste the provided shortcode from the metabox "How to Use" and place it any page or post. I recommending doing so now on a test page so that you can continually preview your dashboard and ensure it is setup right. You can also preview the changes like any other page by clicking "Preview Changes" or "View Dashboard".
 
 With the Ambassador System, you will want to place dashboards within WLM (WishList Member) visibility shortcodes. They look like `[wlm_private 'Level 1|Level 2']CONTENT[/wlm_private]`, where `Level 1` and `Level 2` represent various levels, separated by pipes `|`, that should be able to view the content. For more information on how to implement this, view the [WLM documentation](http://member.wishlistproducts.com/11-private-tag-protection/).
