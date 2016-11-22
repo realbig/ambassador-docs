@@ -40,10 +40,13 @@ Now you have the `AUTH_KEY` to use in the headers mentioned above.
 
 In all queries below, the user schema will be as follows (examples in curly braces):
 
-```json
+```
 {
     id: (int) {1},
     name: (string) {"John Doe"},
+    first_name: (string) {"John"},
+    last_name: (string) {"Doe"},
+    email: (string) {"mariapwsy@hotmail.com"},
     url: (string) {""},
     description: (string) {""},
     link: (string) {"http://website.com/author/john/"},
@@ -131,11 +134,15 @@ In all queries below, the user schema will be as follows (examples in curly brac
 }
 ```
 
+## Context
+
+You can set the context of the request with the query parameter `context`. By default it is "view" and does not require authentication. You will want to set this to "edit", which does require authentication, and return private fields. All example URI's below will contain this.
+
 ## Query All Users
 
 In order to query information on all of the users, you will use the endpoint `/users/`.
 
-`https://www.ambassadorsystems.com/wp-json/wp/v2/users/`
+`https://www.ambassadorsystems.com/wp-json/wp/v2/users/?context=edit`
 
 This endpoint will provide information on all users in segments. By default, this number is 10. You can view up to 100 users at a time by using the query parameter `per_page`. In order to get information on all users, you will need to paginate through the users with the query parameter `page`. The steps will most likely work as below:
 
@@ -144,11 +151,13 @@ This endpoint will provide information on all users in segments. By default, thi
 3. Query `/users/?per_page=100&page=n` where `n` represents the current page.
 4. Repeat step 2 and 3 as needed until either user count is under 100 or is 0.
 
+NOTE: If you're running into a 502 error on the response, the server is overloaded. Reduce the number of users per page until the error subsides.
+
 ## Query User Information
 
 In order to query information on one user, you will use the endpoint `/users/USER_ID/`, where `USER_ID` is the ID of the user.
 
-`https://www.ambassadorsystems.com/wp-json/wp/v2/users/USER_ID/`
+`https://www.ambassadorsystems.com/wp-json/wp/v2/users/USER_ID/?context=edit`
 
 `USER_ID` will need to be replaced with the user ID you want to query.
 
@@ -203,7 +212,7 @@ add_filter( 'ambassadorprofile_custom_user_rest_fields', function ( $fields ) {
 
 Below is what the full curl request would look like from terminal:
 
-`curl --header "Authorization: Basic AUTH_KEY" -X POST https://www.ambassadorsystems.com/wp-json/wp/v2/users/USER_ID -d "KEY=VALUE"`
+`curl --header "Authorization: Basic AUTH_KEY" -X POST https://www.ambassadorsystems.com/wp-json/wp/v2/users/USER_ID?context=edit -d "KEY=VALUE"`
 
 Where you make the following replacements:
 
