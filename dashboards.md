@@ -41,6 +41,34 @@ The user viewing the dashboard only needs to see specific entries, typically in 
 
 You can also enter a "Custom Email" to match against instead of the logged in user's email address. Technically speaking, you could enter any value here and it would match against whichver column you choose.
 
+### Setup column settings
+
+Scroll to the bottom of the page where you will find a meta box labelled "Column Settings". 
+
+![columnsettings](/ambassador-docs/images/dashboard-column-settings.png "Column Settings")
+
+From here you will modify the following:
+
+#### Show (column visibility)
+
+Place a check mark next to every column that you want to show on the dashboard. All other columns will be hidden from view (but their data can still be used).
+
+#### Default Value
+
+If any given entry (cell) in the Google Sheet is empty (has no value), the column default value will be used instead. Each column can be given one default value to use in all empty cells for any given column.
+
+#### Commands
+
+Commands allow post-processing to entry data. Every single column with a set command will process that command on every single entry within that column. Any number of commands can be used, delimited with a semicolon. Here is an example command:
+
+`userfield field=name column=25` -> Get the name for the user who's ID is in column index 25 (26th from left because of 0-based index)
+
+Available commands:
+
+**userfield**: Displays a user field (EG: name, phone number, zip code, etc) from any other (or self) column. Parameters:
+- **field**: id of field to show. Please refer to <a href="/ambassador-docs/api/#user-schema">API user field list</a> for available fields
+- **column**: index of column to get user ID from. Count columns to get index. NOTE: it is 0-based index, so start at 0.
+
 ### Everything else
 
 Now go through and setup everything else. All other settings are visual and mostly self-explanatory. Simply edit the settings, update the dashboard, and then preview your changes.
