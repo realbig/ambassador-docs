@@ -66,7 +66,7 @@ Commands allow post-processing to entry data. Every single column with a set com
 Available commands:
 
 **userfield**: Displays a user field (EG: name, phone number, zip code, etc) from any other (or self) column. Parameters:
-- **field**: id of field to show. Please refer to <a href="/ambassador-docs/api/#user-schema">API user field list</a> for available fields
+- **field**: id of field to show. Please refer to <a href="/ambassador-docs/api/#available-user-fields">API user field list</a> for available fields
 - **column**: index of column to get user ID from. Count columns to get index. NOTE: it is 0-based index, so start at 0.
 
 ### Everything else
