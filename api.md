@@ -134,6 +134,53 @@ In all queries below, the user schema will be as follows (examples in curly brac
 }
 ```
 
+## Available User Fields
+
+Here is an easy to read list of available user fields:
+
+**WordPress User Fields**
+- ID
+- login
+- email
+- url
+- registered
+- name
+
+**WordPress User Custom Meta**
+- agent_ambassadors
+- lender_ambassadors
+- agent_user_id
+- membership_level
+- score
+- cumulative_count
+- weekly_count
+- quarterly_count
+- next_lender_id
+- timestamp_of_last_update
+- custom_preferred_zip
+
+**Wishlist Member Profile Meta (NOTE: These ARE case-sensitive)**
+- Farm_Zip_1
+- Farm_Zip_2
+- Farm_Zip_3
+- Farm_Zip_4
+- Farm_Zip_5
+- Phone
+- business_name
+- Real_Estate_License
+- Biography
+- Brokerage
+- Website
+- Youtube_URL
+- address
+- address_company
+- address_address1
+- address_address2
+- address_city
+- address_state
+- address_zip
+- address_country
+
 ## Context
 
 You can set the context of the request with the query parameter `context`. By default it is "view" and does not require authentication. You will want to set this to "edit", which does require authentication, and return private fields. All example URI's below will contain this.
