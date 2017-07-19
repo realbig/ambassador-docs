@@ -24,6 +24,7 @@ This shortcode is used to display "tools" in the form of "embed codes".
 - keys: "true" or "false". If "true", `key_0` and `key_1` will be replaced in the embed code with the current keys
 - tool_lookup_{n}: {n} is any digit, arbitrary. "tool_name:replacement_variable". "tool_name" is tool name to lookup in tool catalogue and "replacement_variable" is the name of the variable to replace in the embed code.
 - user_id_{type}: {type} is client, agent, or lender. `user_id` variable in embed code is replaced with user ID from active entry based on type set. If {type} is omitted, and parameter is just `user_id`, the currently logged in user's ID is used
+- dashboard_open_button_inject: This will "link" the tool to a dashboard so that the dashboard "Open Button" injects a value into the tool. The value should be the numeric ID of the dashboard to link to.
 - {anything_else}: Every other parameter will simply replace in the embed code the parameter name as the variable name and the parameter value as the replacement value
 
 ## Ambassador User Field
