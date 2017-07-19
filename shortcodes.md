@@ -36,5 +36,5 @@ This shortcode will output a user meta field based on some parameters.
 **Parameter List**
 - type: "client", "lender", or "agent". The user to use from the active entry. Omit to use currently logged in user
 - field: User meta field to output.
-- avatar_size: If "field" is set to "avatar", this can be used to set the size to output. Options: "full", "medium", "thumbnail" (defaults to "thumbnail")
+- avatar_size: If "field" is set to "avatar", this can be used to set the size to output. Options: "full", "medium", "thumbnail"
 - error_message_active_record: If used, the parameter value will be output as an error message if no active entry is selected
