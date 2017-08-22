@@ -51,7 +51,7 @@ Create the templates to be used for the email notifications the site will send. 
 
 #### Merge Tags
 
-There are a few available merge tags to use in the templates. Merge tags are in the format *|MERGETAG|*. Note how there are no spaces or punctuation and it is fully uppercase. Follow this format strictly. Below are the available merge tags:
+There are a few available merge tags to use in the templates. Merge tags are in the format `*|MERGETAG|*`. Note how there are no spaces or punctuation and it is fully uppercase. Follow this format strictly. Below are the available merge tags:
 
 | Merge Tag   | Content Replaced             |
 | ----------- | ---------------------------- |
