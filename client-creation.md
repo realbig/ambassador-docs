@@ -95,5 +95,5 @@ The following:
 1. New WordPress user account is possibly created for the client. Possibly because if the email supplied with the identifier `client_creation_email` already exists, no new user account is created. If the email does not exist as a WordPress user, a new account is created.
 2. The client (new or previously existing) WordPress user ID is passed through back to the form submission. This is done via the dynamic field population parameter `client_user_id`. For more information on dynamic field population, see here: https://www.gravityhelp.com/documentation/article/using-dynamic-population/
 3. Emails are sent:
-a. New User Notification. This is sent only if a new user was created. It is sent to the client.
-b. Home to Home. This is always sent. The agent and lender email addresses are cc'd onto the email and it is sent to the client email.
+- New User Notification. This is sent only if a new user was created. It is sent to the client.
+- Home to Home. This is always sent. The agent and lender email addresses are cc'd onto the email and it is sent to the client email.
